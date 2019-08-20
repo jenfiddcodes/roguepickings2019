@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+    height: 100%;/* for flexbox to function properly*/
 }
 
 /*
@@ -97,6 +98,120 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+   *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+   /*font-family: 'Montserrat', sans-serif;*/
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  height: 100%; /* for flexbox to function properly*/
+  font-size: 16px;
+}
+
+/* =======MOBILE FIRST======================*/
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  margin-bottom: 20px;
+
+}
+
+header h1{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+  .logo-span {
+    color: #77a466;
+  }
+
+nav ul li{
+  color: #77a466;
+  font-weight: bold;
+  font-size: 1em;
+  padding-bottom: 10px;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+  nav ul li a{
+    text-decoration: none;
+    color: #77a466;
+  }
+
+  nav ul li a:hover{
+    color: #000;
+  }
+
+.hero-img {
+    margin-top: 20px;
+}
+
+img {
+  width: 100%;
+  border-top: 3px solid #77a466;
+  border-bottom: 3px solid #77a466;
+}
+
+.welcome {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.welcome h2 {
+  color: #77a466;
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+
+.information {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.specials h3, .reviews h3, .contact h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.reviews, .contact {
+  margin-top: 15px;
+}
+
+.reviews, .contact {
+  margin-top: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-size: .9em;
+  font-weight: bold;
+  padding: 15px;
+}
+   .footer-span{
+     color: #77a466;
+     font-family: 'Lobster', cursive;
+   }
+
+
 
 /* ==========================================================================
    Helper classes
@@ -181,15 +296,65 @@ textarea {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/* =======MEDIA QUERIES======================*/
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* =======TABLET SIZE======================*/
+@media (min-width: 768px) {
+
 }
+
+/* =======DESKTOP SIZE======================*/
+@media (min-width: 940px) {
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  header h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5625em;
+  }
+
+    .logo-span {
+      color: #77a466;
+    }
+
+  .logo {
+    padding-left: 20px;
+  }
+
+  nav {
+    padding-right: 10px;
+  }
+  nav ul li{
+    color: #77a466;
+    display: inline;
+    font-weight: bold;
+    font-size: 0.875em;
+    padding-left: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    color: #77a466;
+  }
+
+  nav ul li a:hover{
+    text-decoration: underline;
+  }
+
+}
+
+
+
+
+
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
@@ -263,4 +428,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
