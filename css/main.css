@@ -375,14 +375,8 @@ footer {
   }
 
   header h1{
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 1.5625em;
   }
-
-    .logo-span {
-      color: #77a466;
-    }
 
   .logo {
     padding-left: 20px;
@@ -392,10 +386,7 @@ footer {
     padding-right: 10px;
   }
   nav ul li{
-    color: #77a466;
-    font-weight: bold;
     font-size: 0.875em;
-    text-transform: uppercase;
   }
 
   nav ul li a{
@@ -405,6 +396,26 @@ footer {
 
   nav ul li a:hover{
     text-decoration: underline;
+  }
+
+  .information {
+    flex-flow: row nowrap;
+  }
+
+  .specials, .reviews, .contact {
+    flex-basis: auto;
+  }
+
+  .reviews {
+    border-right: 0.5px solid  #172013;
+  }
+
+  .contact {
+    border-top: none;
+  }
+
+  footer {
+    font-size: 1.25em;
   }
 
 }
