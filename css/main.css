@@ -117,6 +117,8 @@ body{
 
 /* =======MOBILE FIRST======================*/
 
+
+/* =======HEADER==========*/
 header{
   display: flex;
   justify-content: center;
@@ -143,6 +145,7 @@ nav ul li{
   padding-bottom: 10px;
   list-style-type: none;
   text-transform: uppercase;
+  text-align: center;
 }
 
   nav ul li a{
@@ -164,6 +167,7 @@ img {
   border-bottom: 3px solid #77a466;
 }
 
+/* =======WELCOME==========*/
 .welcome {
   margin-bottom: 20px;
   padding: 15px;
@@ -174,8 +178,9 @@ img {
   text-transform: uppercase;
 }
 
-
+/* =======INFORMATION ==========*/
 .information {
+  background-color: #e3ecdf;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -186,17 +191,33 @@ img {
 .specials h3, .reviews h3, .contact h3 {
   font-weight: bold;
   text-transform: uppercase;
+  padding-top: 10px;
   padding-bottom: 10px;
+  text-align: left;
 }
 
-.reviews, .contact {
-  margin-top: 15px;
+.specials, .reviews, .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.specials ul li {
+  color: #77a466;
+  text-decoration: none;
+  list-style-type: none;
+  padding-bottom: 5px;
 }
 
-.reviews, .contact {
-  margin-top: 15px;
+.reviews {
+    border-top: 1px solid #172013;
+    border-bottom: 1px solid #172013;
+    padding-bottom: 10px;
 }
 
+
+/* =======FOOTER==========*/
 footer {
   display: flex;
   justify-content: center;
@@ -301,6 +322,47 @@ footer {
 /* =======TABLET SIZE======================*/
 @media (min-width: 768px) {
 
+  header h1{
+    font-size: 2.5em;
+  }
+
+  nav ul li{
+    display: inline;
+    padding-left: 10px;
+  }
+
+  .information {
+    height: auto;
+    flex-flow: row wrap;
+  }
+
+  .specials, .reviews, .contact {
+    border-top: none;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .specials, .reviews {
+    flex-basis: 50%;
+  }
+
+  .reviews {
+    border-left: 0.5px solid  #172013;
+    padding: 0 15px;
+    border-bottom: none;
+    border-top: none;
+  }
+
+
+  .contact {
+    margin-top: 15px;
+    background-color: #e3ecdf;
+    border-top: 0.5px solid #172013;
+    padding-left: 10px;
+    flex-basis: 100%;
+  }
+
 }
 
 /* =======DESKTOP SIZE======================*/
@@ -331,11 +393,8 @@ footer {
   }
   nav ul li{
     color: #77a466;
-    display: inline;
     font-weight: bold;
     font-size: 0.875em;
-    padding-left: 10px;
-    text-decoration: none;
     text-transform: uppercase;
   }
 
